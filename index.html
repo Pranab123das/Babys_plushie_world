@@ -13,6 +13,54 @@
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 10% 5%,#fff 0 7%,transparent 27%),linear-gradient(145deg,#fff7f0,#ffeaf1 55%,#f7efff);color:var(--ink);font-family:Nunito, sans-serif;overflow-x:hidden}button{font:inherit;cursor:pointer;border:0}button:focus-visible{outline:3px solid #bd7291;outline-offset:4px}.wrap{width:min(1100px,92%);margin:auto}.topbar{text-align:center;padding:18px 12px 0;color:#b77b91;font-weight:800;letter-spacing:2px;font-size:.78rem}.hero{text-align:center;padding:44px 12px 30px;position:relative}.eyebrow{display:inline-block;background:#fff9;border:1px solid #fff;padding:8px 16px;border-radius:99px;font-size:.8rem;box-shadow:var(--shadow)}h1{font-family:Quicksand,sans-serif;font-size:clamp(2.3rem,7vw,4.6rem);line-height:1.05;margin:18px 0 12px;color:#bd6d89;font-weight:800}.hero p{font-size:1.08rem;max-width:620px;margin:0 auto 20px;line-height:1.7}.hero-plush{font-size:clamp(3rem,9vw,5.3rem);margin:14px 0;filter:drop-shadow(0 8px 5px #c78a9a22);animation:bob 3s ease-in-out infinite}.pill{display:inline-flex;align-items:center;gap:7px;background:#fff;padding:10px 17px;border-radius:99px;color:#b36d87;font-weight:900;box-shadow:var(--shadow)}.section{padding:28px 0 38px}.section-head{text-align:center;margin-bottom:22px}.section-head h2{font:800 clamp(1.6rem,4vw,2.35rem) Quicksand,sans-serif;color:#bd6d89;margin:0 0 7px}.section-head p{margin:0;color:#9b7889}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}.card{background:#fffaf0d9;border:1px solid #fff;border-radius:25px;padding:20px;box-shadow:var(--shadow);text-align:center;position:relative;overflow:hidden}.card:before{content:"";position:absolute;width:100px;height:100px;border-radius:50%;background:#ffe4ec66;right:-35px;top:-40px}.plush{font-size:3.3rem;display:block;position:relative;filter:drop-shadow(0 6px 3px #bb819122);animation:bob 3.8s ease-in-out infinite}.card h3{margin:8px 0 5px;color:#a85e7b;font-size:1.1rem}.card p{font-size:.92rem;line-height:1.5;min-height:42px;margin:0 0 13px}.cute-btn{background:linear-gradient(135deg,#f4b0c4,#e58eaa);color:white;padding:11px 17px;border-radius:99px;font-weight:900;box-shadow:0 6px 14px #d88aa344;transition:transform .2s,filter .2s}.cute-btn:hover{transform:translateY(-2px);filter:saturate(1.1)}.cute-btn.alt{background:linear-gradient(135deg,#c8b6ed,#a895d8)}.cute-btn.mint{background:linear-gradient(135deg,#a8d9c1,#77b99a)}.wide-card{background:#fff9f5e8;border:1px solid white;border-radius:28px;padding:25px;box-shadow:var(--shadow);text-align:center}.message{font:700 1.18rem Quicksand,sans-serif;line-height:1.6;color:#a45d79;min-height:60px;margin:14px auto;max-width:720px}.small{font-size:.82rem;color:#a88797}.hug-area{position:relative;display:grid;place-items:center;min-height:210px;overflow:hidden}.heart{font-size:5.2rem;display:inline-block;filter:drop-shadow(0 8px 8px #df779044);transform:scale(1);touch-action:none;user-select:none}.heart.charging{animation:charge 3s linear forwards}.hold-note{font-size:.85rem;color:#a88797}.burst{position:fixed;left:0;top:0;pointer-events:none;z-index:30;font-size:22px;animation:fly 1.45s ease-out forwards}.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#fff;padding:13px 20px;border-radius:99px;box-shadow:var(--shadow);z-index:50;font-weight:900;color:#ae6682;transition:.25s;text-align:center;max-width:90vw}.toast.show{opacity:1;transform:translate(-50%,0)}.letter{max-width:760px;margin:auto;background:linear-gradient(145deg,#fffaf3,#fff0f4);border:2px dashed #efbfd0;border-radius:25px;padding:25px;text-align:left;line-height:1.8;display:none;white-space:pre-line}.letter.open{display:block;animation:fade .5s}.coupon{background:linear-gradient(145deg,#fff,#fff0f5);border:2px dashed #e9b2c4;border-radius:22px;padding:18px}.coupon .plush{font-size:2.6rem}.coupon p{min-height:0}.breath-orb{width:110px;height:110px;margin:18px auto;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#f5b5ca 65%,#d88eaa);box-shadow:0 0 0 14px #f9dce766,0 0 35px #e9a8bf66}.breath-orb.go{animation:breathe 8s ease-in-out infinite}.footer{text-align:center;padding:35px 12px 55px;color:#ad8294}.floaty{position:fixed;bottom:-40px;pointer-events:none;z-index:0;animation:floatUp linear forwards;opacity:.7}.content{position:relative;z-index:1}.divider{width:90px;height:5px;background:#f3c4d2;border-radius:99px;margin:16px auto}
 @keyframes bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-9px) rotate(2deg)}}@keyframes charge{0%{transform:scale(1)}80%{transform:scale(1.75)}100%{transform:scale(2.15)}}@keyframes fly{0%{transform:translate(0,0) scale(.5) rotate(0);opacity:1}100%{transform:translate(var(--x),var(--y)) scale(1.2) rotate(var(--r));opacity:0}}@keyframes floatUp{to{transform:translateY(-110vh) rotate(30deg);opacity:0}}@keyframes breathe{0%,100%{transform:scale(.78)}50%{transform:scale(1.25)}}@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+/* CENTRE ALL POPUP MESSAGES */
+.toast {
+    left: 50% !important;
+    top: 50% !important;
+    bottom: auto !important;
+    transform: translate(-50%, -50%) scale(.92) !important;
+    opacity: 0;
+    width: max-content;
+    max-width: min(88vw, 520px);
+    white-space: normal;
+    padding: 18px 24px;
+    border: 2px solid #ffe0e9;
+    border-radius: 24px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.6;
+    box-shadow: 0 15px 45px #a85e7b35;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.toast.show {
+    opacity: 1 !important;
+    transform: translate(-50%, -50%) scale(1) !important;
+}
+
+/* THREE-SECOND EMOJI CHARGE */
+.hold-target {
+    transform-origin: center;
+    transition: transform 3s linear, filter 3s linear !important;
+    will-change: transform;
+}
+
+.hold-target.charging {
+    transform: scale(2.3) !important;
+    filter: drop-shadow(0 0 18px #f47da8) !important;
+}
+
+/* MAKE BUTTONS FEEL INTERACTIVE */
+.cute-btn {
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.cute-btn.holding {
+    filter: brightness(1.08);
+}
 </style>
 </head>
 <body>
@@ -111,23 +159,475 @@ Your very enthusiastic kiss-and-hug supplier. 💋</div></div>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
-const $=id=>document.getElementById(id);
-let toastTimer, holdTimer, held=false, suppressClick=false, breathing=false, breathInterval;
-function toast(message){const el=$('toast');el.textContent=message;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),2800)}
-function burst(x,y,count=24,items=['💗','💋','💕','✨','🧸']){for(let i=0;i<count;i++){const p=document.createElement('span');p.className='burst';p.textContent=items[Math.floor(Math.random()*items.length)];p.style.left=x+'px';p.style.top=y+'px';const a=Math.random()*Math.PI*2,d=65+Math.random()*180;p.style.setProperty('--x',Math.cos(a)*d+'px');p.style.setProperty('--y',Math.sin(a)*d+'px');p.style.setProperty('--r',(Math.random()*500-250)+'deg');document.body.appendChild(p);setTimeout(()=>p.remove(),1550)}}
-function plushAction(name,msg){toast(msg);const r=event.currentTarget.getBoundingClientRect();burst(r.left+r.width/2,r.top,13,['💗','✨','🌸','💕'])}
-function kissAttack(){toast('MUWAHHHHSSSHSHSHSHS! KISS ATTACK FOR KUCHUUUU! 💋💋💋');burst(innerWidth/2,innerHeight*.55,65,['💋','😘','💗','💕','💞'])}
-function singleHug(){toast('A very, very tight hug. SQUUUIIIISH! 🤗');$('hugMessage').textContent='Consider yourself hugged a thousand times. I am not letting go just yet. 💗';burst(innerWidth/2,innerHeight*.48,22,['🤗','💗','🧸','💕'])}
-function startHold(e){if(e.button!==undefined&&e.button!==0)return;held=false;suppressClick=false;const h=$('hugHeart');h.setPointerCapture?.(e.pointerId);h.classList.remove('charging');void h.offsetWidth;h.classList.add('charging');holdTimer=setTimeout(()=>{held=true;suppressClick=true;h.classList.remove('charging');toast('MEGA HUG EXPLOSIONNNN! A HUNDRED TINY HUGS FOR YOU! 💗');$('hugMessage').textContent='A hundred little hugs have been released just for you!';burst(innerWidth/2,innerHeight*.45,100,['💗','🤗','🧸','💋','💕','🐼','🎀'])},3000)}
-function endHold(){clearTimeout(holdTimer);$('hugHeart').classList.remove('charging');if(!held&&!suppressClick)singleHug();held=false}
-const heart=$('hugHeart');heart.addEventListener('pointerdown',startHold);heart.addEventListener('pointerup',endHold);heart.addEventListener('pointercancel',()=>{clearTimeout(holdTimer);heart.classList.remove('charging');held=false});heart.addEventListener('lostpointercapture',()=>{clearTimeout(holdTimer);heart.classList.remove('charging')});heart.addEventListener('click',e=>{if(suppressClick){suppressClick=false;e.preventDefault();return}if(e.detail!==0)singleHug()});
-const affirmations=['You do not have to be cheerful every minute to be loved every second.','You are allowed to rest without earning it.','Even on a difficult day, you are still someone’s favourite person.','Your feelings are welcome here. All of them.','You are not too much, and you are never a burden for needing care.','You deserve softness, patience and a little extra chocolate.','You do not need to have everything figured out tonight.','A bad day is something you are going through, not who you are.','You are precious exactly as you are, not just when you are smiling.','If today is all tangled up, we can take it one tiny moment at a time.','You deserve the same kindness you give to everyone else.','Sending you a pocket-sized hug that you can keep.'];
-let lastAff=-1;function newAffirmation(){let n;do{n=Math.floor(Math.random()*affirmations.length)}while(n===lastAff);lastAff=n;$('affirmation').textContent=affirmations[n];burst(innerWidth/2,innerHeight*.55,10,['💗','✨','🌷'])}
-function toggleLetter(){const l=$('letter');l.classList.toggle('open');$('letterBtn').textContent=l.classList.contains('open')?'Close your little letter':'Open your little letter'}
-function redeem(msg){toast(msg);burst(innerWidth/2,innerHeight*.6,20,['💗','🎀','✨','💋'])}
-function toggleBreathing(){breathing=!breathing;$('breathOrb').classList.toggle('go',breathing);$('breathBtn').textContent=breathing?'Pause this moment':'Start a gentle pause';$('breathText').textContent=breathing?'Breathe in as the circle grows… breathe out as it softens.':'Whenever you’re ready, breathe in… and out.'}
-function pamperMe(){const options=[()=>kissAttack(),()=>singleHug(),()=>toast('Pat pat pat… forehead kiss… and a blanket burrito. 🧸💗'),()=>toast('The entire plushie gang is piling in for a group hug! 🧸🐼🐱🐰'),()=>toast('Muwahhh! Mwah! MWAHHH! You have been kissed silly. 💋')];options[Math.floor(Math.random()*options.length)]()}
-function makeFloaty(){const f=document.createElement('span');f.className='floaty';f.textContent=['♡','💕','🌸','🎀','✨'][Math.floor(Math.random()*5)];f.style.left=Math.random()*100+'vw';f.style.fontSize=(14+Math.random()*20)+'px';f.style.animationDuration=(8+Math.random()*7)+'s';document.body.appendChild(f);setTimeout(()=>f.remove(),16000)}setInterval(makeFloaty,1250);
+const $ = id => document.getElementById(id);
+
+let toastTimer;
+let holdTimer;
+let activeButton = null;
+let activeTarget = null;
+let holdCompleted = false;
+let suppressNextClick = false;
+
+const toastElement = $('toast');
+
+function toast(message) {
+    toastElement.textContent = message;
+    toastElement.classList.add('show');
+
+    clearTimeout(toastTimer);
+
+    toastTimer = setTimeout(() => {
+        toastElement.classList.remove('show');
+    }, 3000);
+}
+
+function randomMessage(messages) {
+    const index = Math.floor(Math.random() * messages.length);
+    return messages[index];
+}
+
+/* TEN DIFFERENT MESSAGES FOR EACH BUTTON TYPE */
+
+const messageBank = {
+
+teddy: [
+    "Teddy Hugsy is wrapping his tiny arms around you. The biggest bear hug ever! 🧸",
+    "Come closer, Kuchuuu. Teddy has saved his warmest cuddle just for you.",
+    "A giant squishy bear hug for the most precious girl! 🤎",
+    "Teddy says you deserve a thousand hugs today.",
+    "SQUEEEEEZE! Teddy refuses to let go just yet!",
+    "A little bear hug to make your heart feel warmer.",
+    "Teddy has decided that you are his favourite human.",
+    "A blanket, a pillow and one very cuddly teddy. All yours!",
+    "Sending you the softest hug from your little bear friend.",
+    "Teddy wants you to remember that you are deeply loved. 🧸"
+],
+
+panda: [
+    "Panda Pudding boops your nose and gives you a tiny kiss. MWAH! 🐼",
+    "A little panda kiss, delivered with an enormous amount of love.",
+    "Panda says: close your eyes. MWAH! One kiss for my Kuchuuu.",
+    "Panda has prepared a whole basket of kisses for you.",
+    "A tiny nose boop followed by a very soft cuddle.",
+    "Panda thinks you deserve to be kissed approximately a million times.",
+    "MWAHHH! Panda has officially started your kiss delivery.",
+    "A little kiss for your forehead and another for your cheek.",
+    "Panda is sending you a pocket full of sweetness.",
+    "You have been selected as Panda Pudding's favourite person. 💗"
+],
+
+kitty: [
+    "Kitty says you are precious, pretty, loved and absolutely purr-fect! 🎀",
+    "A little kitty compliment: your existence makes the world sweeter.",
+    "Kitty wants you to know that you are someone's favourite person.",
+    "That little bow? For the prettiest girl in the whole world.",
+    "You deserve flowers, cuddles and the softest kind of love.",
+    "Kitty says your smile is one of her favourite things.",
+    "A tiny reminder: you are more than enough, Kuchuuu.",
+    "Kitty has officially declared you the princess of this plushie kingdom.",
+    "You are adorable even when you don't feel adorable.",
+    "Sending you a little kitty love and a very dramatic MWAH! 🐱"
+],
+
+bunny: [
+    "Bunny Blossom brings you a little flower for no reason other than you deserve one. 🌷",
+    "A flower for my favourite person. May your day become a little softer.",
+    "Bunny says: you deserve beautiful things, even on ordinary days.",
+    "A tiny bouquet and a thousand gentle cuddles for you.",
+    "Bunny has picked the prettiest flower for the prettiest girl.",
+    "A little flower to remind you that you are growing beautifully.",
+    "Here is a flower, a kiss and a very soft bunny hug.",
+    "Bunny hopes something lovely finds you today.",
+    "You deserve kindness in every little form. Here's a flower!",
+    "Bunny Blossom sends you a garden full of love. 🐰"
+],
+
+snowy: [
+    "Blanket tucked. Pillow fluffed. Forehead kissed. Welcome to the cuddle zone!",
+    "Snowy has brought the fluffiest blanket for his favourite human.",
+    "Come snuggle. There is no hurry and nowhere else you need to be.",
+    "A warm little cuddle from your fluffy polar bear.",
+    "Snowy says: rest now, sweetheart. You deserve some softness.",
+    "A blanket burrito with extra kisses coming right up!",
+    "Your comfort is Snowy's number one priority.",
+    "A tiny polar bear is guarding your peaceful little corner.",
+    "Sending you the coziest hug from the snowy north.",
+    "Get comfy, Kuchuuu. Snowy has got you! 🐻‍❄️"
+],
+
+meow: [
+    "Mewww! Little Meow has brought you seventeen tiny kisses!",
+    "Little Meow refuses to leave until you receive a cuddle.",
+    "A tiny kitten hug for a very special girl.",
+    "Meow says: you are loved more than all the fish in the ocean!",
+    "A little purr, a little kiss and a whole lot of affection.",
+    "Little Meow wants to sit beside you until you feel better.",
+    "A soft paw on your hand and a tiny kiss on your cheek.",
+    "Kitten cuddles have been dispatched immediately!",
+    "You are Little Meow's favourite human. No competition.",
+    "Mewww! Sending you a thousand tiny kitten kisses! 😽"
+],
+
+kiss: [
+    "MUWAHHHHSSSHSHSHS! A whole delivery truck of kisses for you!",
+    "Mwah! Mwah! MWAHHHH! Come here, my Kuchuuu!",
+    "One kiss for your forehead, one for your cheek and a million more!",
+    "Kiss attack incoming! You have been warned! 💋",
+    "A very dramatic MWAHHHH from your favourite kiss supplier!",
+    "I hope you are ready because these kisses are never-ending!",
+    "Sending kisses until that little face gets the biggest smile.",
+    "Mwahhhhh! Consider yourself thoroughly kissed!",
+    "A pocket full of kisses, all reserved for you.",
+    "Kiss delivery complete. Actually, no. Sending another hundred!"
+],
+
+forehead: [
+    "A gentle forehead kiss to remind you that you are safe and loved.",
+    "Mwah. One little forehead kiss, just because you are my favourite.",
+    "A soft kiss on your forehead. Stay close, sweetheart.",
+    "Closing my eyes and giving you the gentlest forehead smooch.",
+    "One kiss for your worries, one for your tiredness and one for you.",
+    "A forehead kiss that says: you don't have to handle everything alone.",
+    "Mwahhh! A tiny kiss from someone who adores you.",
+    "Let me kiss that pretty forehead and hold you close.",
+    "A soft little smooch for my precious girl.",
+    "Forehead kiss delivered with an unlimited amount of love. 😘"
+],
+
+cuddle: [
+    "Pulling you into the warmest cuddle. Stay as long as you need.",
+    "Come here, baby. Let me wrap my arms around you.",
+    "A long cuddle with no rushing and no letting go.",
+    "Your head on my chest, my arms around you. Perfect.",
+    "A soft, safe cuddle for my favourite human.",
+    "SQUISHHH! You have officially been hugged.",
+    "I wish I could hold you right now. Sending the biggest virtual cuddle.",
+    "A cuddle that says more than a thousand words.",
+    "Come closer. There is always room for one more hug.",
+    "Holding you gently and reminding you how loved you are. 🤗"
+],
+
+headpat: [
+    "Pat pat pat pat pat! A little head pat for my precious girl.",
+    "There, there, Kuchuuu. You're doing wonderfully.",
+    "A gentle pat on your head and a tiny kiss on your forehead.",
+    "Pat pat! Someone deserves extra affection today.",
+    "You have worked hard. Now accept your official head pats!",
+    "A thousand gentle pats and a million reassuring hugs.",
+    "Pat pat pat. I am proud of you, sweetheart.",
+    "A tiny head pat from your personal happiness department.",
+    "Sending you the softest little head pats.",
+    "Pat pat! You're doing better than you think. 🥺"
+],
+
+hug: [
+    "A very tight hug. SQUUUIIIISH! I am not letting go yet!",
+    "Consider yourself hugged a thousand times.",
+    "Come into my arms, Kuchuuu. I've got you.",
+    "A hug for your heart, a kiss for your forehead.",
+    "Sending the warmest hug across all the distance.",
+    "You deserve a hug that lasts longer than the difficult day.",
+    "A giant squeeze from your favourite person!",
+    "If I were there, I'd hug you until you felt safe and warm.",
+    "A little reminder wrapped in a big hug: you are loved.",
+    "Hug delivery complete. Actually, sending another! 🫂"
+],
+
+affirmation: [
+    "You do not have to be cheerful every minute to be loved every second.",
+    "You are allowed to rest without earning it.",
+    "Even on a difficult day, you are someone's favourite person.",
+    "Your feelings are welcome here. All of them.",
+    "You are never a burden for needing care.",
+    "You deserve softness, patience and a little extra chocolate.",
+    "You do not need to have everything figured out tonight.",
+    "A bad day is something you are going through, not who you are.",
+    "You are precious exactly as you are.",
+    "Take your time, sweetheart. There is no rush."
+],
+
+breathing: [
+    "Take a comfortable breath. You deserve a little pause.",
+    "Slow down, sweetheart. You don't have to rush through today.",
+    "One gentle breath at a time. That's enough.",
+    "Let your shoulders soften. You deserve a peaceful moment.",
+    "No pressure. Just a little moment for yourself.",
+    "You can pause whenever you need to.",
+    "A little stillness for a very precious heart.",
+    "Breathe gently, Kuchuuu. You are doing just fine.",
+    "The world can wait for a moment. Take your time.",
+    "Sending you a peaceful little moment. 🌸"
+],
+
+letter: [
+    "A little letter from someone who wishes he could hug you right now.",
+    "There are so many things I want you to know, sweetheart.",
+    "You deserve to be loved on the hard days too.",
+    "You never have to pretend to be okay with me.",
+    "If you need to talk, I will listen. If you need quiet, I will stay.",
+    "You are precious even when you feel tired or overwhelmed.",
+    "A difficult day does not change how much you mean to me.",
+    "You can take your time. I am not rushing your heart.",
+    "You are loved in every version of yourself.",
+    "A little reminder from me: you are my favourite person. 💌"
+],
+
+spoil: [
+    "The entire plushie gang is piling in for a group hug!",
+    "Muwahhh! Mwah! MWAHHH! You have been kissed silly!",
+    "Princess treatment activated. Unlimited affection incoming!",
+    "A thousand cuddles, a million kisses and zero limits!",
+    "Teddy, Panda, Kitty and Bunny are all here to spoil you!",
+    "Today's forecast: 100% chance of hugs and kisses.",
+    "Your personal pampering department is working overtime!",
+    "A little kiss storm followed by a giant cuddle!",
+    "You asked to be spoiled. We took that very seriously!",
+    "You are officially the most pampered girl in this little world!"
+]
+
+};
+
+/* IDENTIFY WHICH MESSAGE COLLECTION BELONGS TO A BUTTON */
+
+function getCategory(button) {
+    const card = button.closest('.card, .wide-card');
+    const heading = card?.querySelector('h3')?.textContent.toLowerCase() || '';
+    const label = button.textContent.toLowerCase();
+
+    if (heading.includes('teddy')) return 'teddy';
+    if (heading.includes('panda')) return 'panda';
+    if (heading.includes('kitty')) return 'kitty';
+    if (heading.includes('bunny')) return 'bunny';
+    if (heading.includes('snowy')) return 'snowy';
+    if (heading.includes('meow')) return 'meow';
+
+    if (heading.includes('muwah')) return 'kiss';
+    if (heading.includes('forehead')) return 'forehead';
+    if (heading.includes('cuddle')) return 'cuddle';
+    if (heading.includes('head pat')) return 'headpat';
+
+    if (heading.includes('words for your heart')) return 'affirmation';
+    if (heading.includes('breathing')) return 'breathing';
+    if (heading.includes('letter')) return 'letter';
+
+    if (label.includes('forehead')) return 'forehead';
+    if (label.includes('head')) return 'headpat';
+    if (label.includes('kiss') || label.includes('muwah')) return 'kiss';
+    if (label.includes('hug') || label.includes('cuddle')) return 'hug';
+    if (label.includes('breath') || label.includes('pause')) return 'breathing';
+    if (label.includes('letter')) return 'letter';
+    if (label.includes('spo il') || label.includes('more')) return 'spoil';
+
+    if (card?.querySelector('.breath-orb')) return 'breathing';
+    if (card?.querySelector('.letter')) return 'letter';
+    if (card?.querySelector('.heart')) return 'hug';
+
+    return 'spoil';
+}
+
+/* FIND THE EMOJI ABOVE THE BUTTON */
+
+function findEmoji(button) {
+    const card = button.closest('.card, .wide-card');
+
+    return card?.querySelector(
+        '.plush, .heart, .breath-orb, .hero-plush'
+    ) || button;
+}
+
+/* RELATED EMOJI FOR EACH HOLD EXPLOSION */
+
+const emojiBank = {
+    teddy: ['🧸','🤎','💕','🤗','💗'],
+    panda: ['🐼','💋','💕','🎀','💗'],
+    kitty: ['🐱','🎀','💗','✨','💕'],
+    bunny: ['🐰','🌷','🌸','💗','✨'],
+    snowy: ['🐻‍❄️','❄️','🫂','💕','💗'],
+    meow: ['🐱','😽','💗','💕','🐾'],
+    kiss: ['💋','😘','💗','💕','💞'],
+    forehead: ['😘','💗','🌸','💕','💋'],
+    cuddle: ['🤗','🫂','🧸','💗','💕'],
+    headpat: ['🥺','💗','✨','💕','🫂'],
+    hug: ['🫂','🤗','💗','🧸','💕'],
+    affirmation: ['💗','🌸','✨','🦋','💕'],
+    breathing: ['🌸','🦋','✨','💗','☁️'],
+    letter: ['💌','💗','💕','🌷','✨'],
+    spoil: ['💗','💋','🧸','🐼','🎀','🤗']
+};
+
+/* CREATE THE EMOJI EXPLOSION */
+
+function createExplosion(target, category) {
+    const rect = target.getBoundingClientRect();
+    const x = rect.left + rect.width / 2;
+    const y = rect.top + rect.height / 2;
+
+    const emojis = emojiBank[category] || emojiBank.spoil;
+
+    for (let i = 0; i < 65; i++) {
+        const particle = document.createElement('span');
+
+        particle.className = 'burst';
+        particle.textContent =
+            emojis[Math.floor(Math.random() * emojis.length)];
+
+        particle.style.left = x + 'px';
+        particle.style.top = y + 'px';
+
+        const angle = Math.random() * Math.PI * 2;
+        const distance = 70 + Math.random() * 210;
+
+        particle.style.setProperty('--x',
+            Math.cos(angle) * distance + 'px');
+
+        particle.style.setProperty('--y',
+            Math.sin(angle) * distance + 'px');
+
+        particle.style.setProperty('--r',
+            (Math.random() * 500 - 250) + 'deg');
+
+        document.body.appendChild(particle);
+
+        setTimeout(() => particle.remove(), 1600);
+    }
+}
+
+/* FIND THE CATEGORY AND SHOW A RANDOM MESSAGE */
+
+function showRandomMessage(button) {
+    const category = getCategory(button);
+    const messages = messageBank[category] || messageBank.spoil;
+
+    toast(randomMessage(messages));
+}
+
+/* HOLD INTERACTION */
+
+document.addEventListener('pointerdown', event => {
+    const button = event.target.closest('button');
+
+    if (!button) return;
+
+    // Redeem buttons are deliberately excluded.
+    if (button.closest('.coupon')) return;
+
+    if (event.button !== undefined && event.button !== 0) return;
+
+    activeButton = button;
+    activeTarget = findEmoji(button);
+    holdCompleted = false;
+
+    activeTarget.classList.add('hold-target');
+
+    // Restart the animation smoothly.
+    activeTarget.classList.remove('charging');
+    void activeTarget.offsetWidth;
+
+    activeTarget.classList.add('charging');
+    button.classList.add('holding');
+
+    holdTimer = setTimeout(() => {
+        holdCompleted = true;
+        suppressNextClick = true;
+
+        const category = getCategory(button);
+
+        activeTarget.classList.remove('charging');
+        createExplosion(activeTarget, category);
+
+        const holdMessages = {
+            teddy: 'BEAR HUG EXPLOSION! A mountain of teddy hugs for you! 🧸',
+            panda: 'PANDA KISS EXPLOSION! A whole army of pandas and kisses! 🐼💋',
+            kitty: 'KITTY LOVE EXPLOSION! A shower of bows, hearts and kitty kisses! 🎀',
+            bunny: 'BUNNY FLOWER EXPLOSION! A garden full of love! 🌷',
+            snowy: 'SNOWY CUDDLE EXPLOSION! A thousand fluffy hugs! 🐻‍❄️',
+            meow: 'MEOWWW! A whole army of tiny kittens is here to cuddle you! 🐱',
+            kiss: 'MUWAHHHH! A gigantic kiss explosion for Kuchuuu! 💋',
+            forehead: 'A thousand tiny forehead kisses, delivered! 😘',
+            cuddle: 'CUDDLE EXPLOSION! The biggest group hug ever! 🫂',
+            headpat: 'PAT PAT PAT! A shower of the gentlest head pats! 💗',
+            hug: 'GIANT HUG EXPLOSION! A hundred little hugs just for you! 🫂',
+            affirmation: 'A little explosion of love and reminders that you matter! 💗',
+            breathing: 'A peaceful shower of little flowers and butterflies! 🌸',
+            letter: 'A thousand tiny love notes, all for you! 💌',
+            spoil: 'THE WHOLE PLUSHIE GANG HAS ARRIVED TO SPOIL YOU! 🎀'
+        };
+
+        toast(holdMessages[category] || holdMessages.spoil);
+
+    }, 3000);
+
+}, true);
+
+/* RELEASE THE BUTTON */
+
+function releaseHold() {
+    clearTimeout(holdTimer);
+
+    if (activeTarget) {
+        activeTarget.classList.remove('charging');
+    }
+
+    if (activeButton) {
+        activeButton.classList.remove('holding');
+    }
+
+    activeButton = null;
+    activeTarget = null;
+}
+
+document.addEventListener('pointerup', releaseHold, true);
+
+document.addEventListener('pointercancel', () => {
+    clearTimeout(holdTimer);
+
+    if (activeTarget) {
+        activeTarget.classList.remove('charging');
+    }
+
+    if (activeButton) {
+        activeButton.classList.remove('holding');
+    }
+
+    activeButton = null;
+    activeTarget = null;
+}, true);
+
+/* BUTTON CLICK: PRESERVE ORIGINAL ACTION AND SHOW RANDOM MESSAGE */
+
+document.addEventListener('click', event => {
+    const button = event.target.closest('button');
+
+    if (!button) return;
+
+    // Do not alter normal coupon redemption.
+    if (button.closest('.coupon')) {
+        // Explicitly repair the listening pass response.
+        if (button.textContent.toLowerCase().includes('redeem') &&
+            button.closest('.coupon').textContent.toLowerCase().includes('listen')) {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+
+            redeem('Listening pass activated! I am right here, Kuchuuu. I will listen patiently, without judgement or rushing you. 💗');
+        }
+
+        return;
+    }
+
+    // A completed hold must not also trigger the click action.
+    if (suppressNextClick) {
+        suppressNextClick = false;
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        return;
+    }
+
+    // Allow the existing action to run first.
+    setTimeout(() => {
+        showRandomMessage(button);
+    }, 30);
+
+}, true);
 </script>
 </body>
 </html>
