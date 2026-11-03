@@ -103,6 +103,28 @@ button.holding {
     transition: transform 0.15s ease;
 }
     
+.letter {
+    display: none;
+    white-space: pre-line;
+}
+
+.letter.show {
+    display: block;
+    animation: letterReveal 0.5s ease;
+}
+
+@keyframes letterReveal {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+    
+    
 </style>
 </head>
 <body>
@@ -846,6 +868,22 @@ if (typeof window.redeem !== 'function') {
         toast(message || 'Your coupon has been activated! 💗');
     };
 }
+    
+function toggleLetter() {
+    const letter = document.getElementById('letter');
+    const button = document.getElementById('letterBtn');
+
+    if (!letter || !button) return;
+
+    letter.classList.toggle('show');
+
+    const isOpen = letter.classList.contains('show');
+
+    button.textContent = isOpen
+        ? 'Close your little letter 💌'
+        : 'Open your little letter';
+}
+    
 </script>
 </body>
 </html>
