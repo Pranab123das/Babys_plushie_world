@@ -256,190 +256,202 @@ function randomMessage(messages) {
 /* =========================
    MESSAGE COLLECTIONS
 ========================= */
-
 const messageBank = {
-teddy: [
-"Teddy Hugsy is wrapping his arms around you, but honestly? I just want to pull you close so we can stay warm together. 🧸",
-"Come closer, Kuchuuu. Teddy is cute, but I'm the one who wants to hold your hand and squeeze you tight all night.",
-"A giant squishy hug for the girl who owns my heart. I want to hold you so close that you feel completely safe. 🤎",
-"Teddy says you deserve a thousand hugs, but I want to wrap my arms around you and whisper how much you mean to me.",
-"SQUEEEEEZE! I'm hugging you through this teddy, but what I really want is to be tangled up under the covers with you, adoring every inch of you.",
-"A little bear hug to warm you up, though I know a much better way—like sitting close together under a big blanket.",
-"Teddy knows you’re my favourite human... and the only one I want to share all my dreams with.",
-"A blanket, a pillow, and a cuddly teddy. Cute, but it’s missing me tangled up in conversation with you.",
-"Sending you the softest hug, but please hurry back so I can hold you in my arms and explore every single hidden treasure of you my love.",
-"Teddy wants you to remember you are deeply loved, and I want you to remember that my heart belongs completely to you. 🧸"
-],
-panda: [
-"Panda Pudding boops your nose, but I'm leaning in to taste those sweet lips until you're completely breathless. MWAH! 🐼",
-"A little panda kiss, but my lips are craving to tell you all the reasons why I adore you.",
-"Panda says: close your eyes. MWAH! One kiss for my Kuchuuu... now keep them closed while I hold you tight.",
-"Panda prepared a basket of kisses, but I’ve got a whole night of adoration saved up for every hidden treasure of your beautiful body.",
-"A tiny nose boop followed by a soft cuddle... right before we drift off to sleep together.",
-"Panda thinks you need to be kissed a million times, and I happily volunteer to show you how much I care every single day.",
-"MWAHHH! Kiss delivery started. Get ready, because you deserve all the affection in the world.",
-"A little kiss for your forehead, one for your cheek, and a very warm, lingering one reserved just for you.",
-"Panda is sending sweetness, but you look way sweeter when you're smiling happily next to me.",
-"You've been selected as Panda’s favourite... which means I get exclusive rights to hold you close and unwrap all your hidden treasures. 💗"
-],
-kitty: [
-"Kitty says you are purr-fect, but I think you're absolutely stunning, especially when you're laughing happily. 🎀",
-"Kitty compliment: your existence makes the world sweeter, and your beautiful heart makes mine skip a beat every time.",
-"Kitty wants you to know you're my favourite person to tease, to hold close, and to cherish from head to toe.",
-"That gorgeous smile looks stunning, but I can't wait to hold you close and let my fingers trace the sweet valleys of your body.",
-"You deserve flowers, intense cuddles, and the kind of thoughtful love that makes you feel like royalty.",
-"Kitty loves your smile, and my absolute favourite view is your beautiful face when I’m holding you tight.",
-"A tiny reminder: you are more than enough, Kuchuuu. You are the only hidden treasure I crave, and I want to spend hours adoring you.",
-"Kitty declared you the princess, which means I'm the lucky guy who gets to treat you right and spoil you completely tonight.",
-"You are so beautiful and adorable even when you don't feel like it. Trust me, just looking at you makes me happy.",
-"Sending you a little kitty love and a very dramatic, deeply affectionate MWAH! 🐱"
-],
-bunny: [
-"Bunny Blossom brings you a flower, but honestly, you're the only beautiful thing I want to focus on today. 🌷",
-"A flower for my favourite person. May your day be soft, and your night be beautifully peaceful, wrapped up in my embrace.",
-"Bunny says you deserve beautiful things, and I want to spend the night keeping you completely comfortable.",
-"A tiny bouquet and a thousand gentle cuddles... followed by a warm embrace once we're alone.",
-"Bunny picked the prettiest flower, but it doesn't even come close to how breathtaking you look just being yourself.",
-"A little flower to remind you that you are growing beautifully, and I love holding your hand as you relax.",
-"Here is a flower, a kiss, and a very soft bunny hug. Now come over here and let's talk properly.",
-"Bunny hopes something lovely finds you today. Hopefully, it's the thought of us spending time together later.",
-"You deserve kindness, but you also deserve to be held close, protected, and let my lips trace down to your core. Here's a flower!",
-"Bunny Blossom sends a garden of love, along with my private invitation to just relax in my company tonight. 🐰"
-],
-snowy: [
-"Blanket tucked. Pillow fluffed. Forehead kissed. Now slide under here, let me wrap you completely under my blanket, and feel your yumm wetness against mine.",
-"Snowy brought the fluffiest blanket, but being close together is the absolute best way to stay warm tonight.",
-"Come snuggle. Leave all your clothes and worries at the door, slide next to me, and let's just get beautifully lost in each other.",
-"A warm little cuddle from your polar bear, as i slide my hand inside caressing ur softy hairs and I promise to keep you safe and warm under this heavy blanket all night.",
-"Snowy says: rest now, sweetheart. Let me hold you tight against my chest until you feel exactly how much I cherish you.",
-"A blanket burrito with extra kisses coming right up! Prepare to be completely caressed by my hands and thoroughly to your sweet blossom.",
-"Your comfort is my number one priority... making sure you feel safe and loved before morning.",
-"A tiny polar bear is guarding your corner, keeping you safe until I can be there to hold you.",
-"Sending you the coziest hug, because I'd rather be right there softly stroking your hair and listening to your day.",
-"Get comfy, Kuchuuu. Snowy has got you, and I promise you are going to feel completely cherished and thoroughly cared for tonight. 🐻‍❄️"
-],
-meow: [
-"Mewww! Little Meow brought seventeen tiny kisses, but I'm bringing one long, sweet kiss that’ll show you my heart.",
-"Little Meow refuses to leave until you're cuddled, and honestly, I plan on keeping my arms wrapped around you all night.",
-"A tiny kitten hug for the girl who makes my pulse race. You have no idea what your presence does to my happiness.",
-"Meow says: you are loved more than all the fish in the ocean... and I want to share every single moment with you tonight, baby.",
-"A little purr, a little kiss, and a whole lot of warmth just to show you how much I want to be near you.",
-"Little Meow wants to sit beside you, but I want to pull you right onto my lap, hold you close, and feel your softyy valleys press against me.",
-"A soft paw on your hand, a tiny kiss on your cheek, and a gentle hug just to remind you that you are mine.",
-"Kitten cuddles dispatched immediately! Get ready to be surrounded by warmth and thoroughly loved very soon.",
-"You are my absolute favourite human. No competition. Now come here, sit down, and tell me everything.",
-"Mewww! Sending a thousand tiny kitten kisses, but saving the sweetest ones for your beautiful lips. 😽"
-],
-kiss: [
-"MUWAHHHHSSSHSHSHS! A whole truckload of kisses, and I’m aiming every single one right at your sweet smile!",
-"Mwah! Mwah! MWAHHHH! Come here right now, my Kuchuuu, my heart belongs completely to you tonight!",
-"One kiss for your forehead, one for your cheek, and a million sweet ones all over your face!",
-"Kiss attack incoming! You better get ready to be caught in a tight embrace and thoroughly covered in affection. 💋",
-"A very dramatic MWAHHHH from your favourite kiss supplier! Warning: these kisses are very affectionate.",
-"I hope you're ready because once I hold you close against me, I have absolutely no intention of letting you go anytime soon.",
-"Sending kisses until you're hiding your blushing face in my neck, looking absolutely beautiful.",
-"Mwahhhhh! Consider yourself thoroughly kissed, cared for, and completely worshipped by the guy who adores you to the core.",
-"A night full of kisses, all reserved for you. Waiting to land on every soft and wet corner of ur skin.",
-"Kiss delivery complete? Never. I'm coming back for seconds, thirds, and a whole night of making you feel completely loved!"
-],
-forehead: [
-"A gentle forehead kiss to remind you that you are safe, loved, and entirely mine to protect and cherish.",
-"Mwah. One little forehead kiss, just because you look so beautifully peaceful when you're resting next to me.",
-"A soft kiss on your forehead. Stay close, sweetheart, let me pull you so close to my chest that we feel completely connected.",
-"Closing my eyes and giving you the gentlest forehead smooch... you make me so incredibly happy when you're close.",
-"One kiss for your worries, one for your tiredness, and a sweet one on the lips to make you forget everything else.",
-"A forehead kiss that says: you don't have to handle everything alone. Let me take care of you tonight.",
-"MWAHHH! A tiny kiss from the guy who is completely, utterly obsessed with your happiness.",
-"Let me kiss that pretty forehead, hold you tight by the waist, and whisper exactly how glad I am to be with you.",
-"A soft little smooch for my precious girl. You look so perfect when you're completely wrapped up and melting in my embrace.",
-"Forehead kiss delivered with an unlimited amount of love... and a promise of deep affection to follow very soon. 😘"
-],
-cuddle: [
-"Slides my hand on ur waist, pulls u closest from behind and cuddlyy cuddlyy untill u feel completely warm and loved.",
-"Come here, baby. Let me wrap my arms around you and hold you so close that there's no space left between us.",
-"A long cuddle with no rushing, no letting go, and a whole lot of smooth, warm affection.",
-"Your head on my chest, my arms tightly around you, our legs tangled together under the sheets. Absolutely perfect.",
-"A soft, safe cuddle for my favourite human. You feel so amazingly warm and perfect squeezed right against me, baby.",
-"SQUISHHH! You have officially been hugged by the guy who can't stop thinking about you.",
-"I wish I could hold you right now. I'd lock you in my embrace, strip away the distance, and keep you next to me.",
-"A cuddle that says more than a thousand words... let the warmth of my embrace show you how much I care.",
-"Come closer. There is always room for you right beside me. Slide right next to me, sweetheart, and let's get cozy.",
-"Holding you gently, kissing your cheek until you're smiling, and reminding you how deeply, intensely loved you are. 🤗"
-],
-headpat: [
-"Pat pat pat pat pat! A little head pat for my precious girl... now come bury your face in my neck and let me hold you.",
-"There, there, Kuchuuu. You're doing wonderfully, and you look so incredibly cute when you look up at me with those sleepy eyes.",
-"A gentle pat on your head, a tiny kiss on your forehead, and my fingers getting tangled in your hair as I pull you close.",
-"Pat pat! Someone deserves extra affection today, and I plan on giving it to you until you are completely relaxed.",
-"You have worked so hard. Now lay back, relax completely, and let me hold you for the rest of the night.",
-"A thousand gentle pats, a million reassuring hugs, and a lifetime of me cherishing and adoring every single part of your personality.",
-"Pat pat pat. I am so incredibly proud of you, sweetheart. Now let me hold you tight and make all your tension completely melt away.",
-"A tiny head pat from your personal happiness department... full physical cuddles are highly mandatory for the next few hours.",
-"Sending you the softest little head pats. I just want to stroke your hair with one hand while my other hand holds you close.",
-"Pat pat! You're doing better than you think. Now come let me pull you close and show you how much I adore you. 🥺"
-],
-hug: [
-"A very tight hug. SQUUUIIIISH! I am not letting go until I've completely memorised the feel of holding you.",
-"Consider yourself hugged a thousand times... and expect a few sweet, soft kisses on your cheek while I'm holding you.",
-"Come into my arms, Kuchuuu. I've got you tight, and I promise to love you intensely.",
-"A hug for your heart, a kiss for your forehead, and my hands resting firmly on your back right where they belong.",
-"Sending the warmest hug across the distance, but I'd much rather be right there resting softly next to you.",
-"You deserve a hug that lasts forever. Let me wrap you up, pull you close to me, and squeeze you tightly.",
-"A giant squeeze from your favourite person! I just want to wrap myself around you and stay like this.",
-"If I were there, I'd hug you so tight against my chest you'd feel exactly how hard and fast your presence makes my heart beat.",
-"A little reminder wrapped in a big hug: you are my absolute everything, and I am completely crazy for you.",
-"Hug delivery complete. Actually, no. I'm keeping my arms around you indefinitely. You're trapped with me. 🫂"
-],
-affirmation: [
-"You don't have to be cheerful every minute to be loved every second. I love you even when you're a tired, grumpy, needy little baby.",
-"You are allowed to rest without earning it. Just lay back, let go of everything, and let me take care of you.",
-"Even on a difficult day, you are the only girl who makes my world completely spin. You are my absolute favourite person.",
-"Your feelings are welcome here. All of them. Cry, vent, rest—I’m staying right here to hold you through all of it.",
-"You are never a burden for needing care. Whispering sweet things and keeping you safe is my favorite thing to do.",
-"You deserve softness, endless patience, and to be held so deeply that you completely forget what you were stressed about.",
-"You do not need to have everything figured out tonight. Just rest right next to me, and we'll handle tomorrow together.",
-"A bad day is just something you're going through, not who you are. To me, you are always the most perfect, beautiful creature.",
-"You are precious and so incredibly beautiful exactly as you are. Never doubt how badly I want to be close to you.",
-"Take your time, sweetheart. I am not going anywhere, and my heart and my arms are completely yours. 🌸"
-],
-breathing: [
-"Take a comfortable breath. Inhale... exhale... now imagine my warm hands holding yours gently.",
-"Slow down, sweetheart. You don't have to rush through today. Just match your breathing to mine while I hold you completely close.",
-"One gentle breath at a time. Close your eyes, let go of the noise, and just think about us relaxing together.",
-"Let your shoulders soften. You deserve a peaceful moment, and I want to be the one right there to help the tension away.",
-"No pressure. Just a little moment for yourself... and a peaceful evening ahead.",
-"You can pause whenever you need to. My shoulder is always here for you to lean on while you rest.",
-"A little stillness for a very precious heart. I'm holding you close and comforting you through this message, baby.",
-"Breathe gently, Kuchuuu. You are doing just fine, and I am so incredibly lucky to have the most gorgeous girl in the world.",
-"The world can wait for a moment. Take your time, get completely comfortable, shed your worries, and let me keep you warm.",
-"Sending you a peaceful little moment... along with a sweet reminder of how much I want to hold you tonight. 🌸"
-],
-letter: [
-"A little letter from the guy who is currently staring at his screen wishing he was right there next to you.",
-"There are so many sweet things I want to share with you, sweetheart. You have no idea how much I adore you.",
-"You deserve to be loved on the hard days too, and I promise to love you harder and hold you tighter when the world gets heavy.",
-"You never have to pretend to be okay with me. I want all of the real, raw, beautiful you.",
-"If you need to talk, I’m all ears. If you need quiet, I’ll just hold you close and trace slow, comforting patterns on your hand.",
-"You are so precious even when you're tired. Honestly, you look incredibly sweet and soft when you're sleepy.",
-"A difficult day doesn't change how much you mean to me. You're still the best, most beautiful thing that ever happened to me.",
-"You can take your time. I am completely patient when it comes to your heart, and my arms will always be here to comfort you.",
-"I love you in every single version of yourself. Messy hair, tired eyes, or laughing—I want it all.",
-"A little reminder from me: you are my girl, my favourite person, and the only one I want next to me. 💌"
-],
-spoil: [
-"The entire plushie gang is piling in, but I'm throwing them off the bed because I want to squeeze you all to myself!",
-"Muwahhh! Mwah! MWAHHH! You have been kissed silly, and I'm just getting started on showing you how much I care!",
-"Princess treatment activated. Prepare to be thoroughly adored, playfully teased, and completely cozy tonight!",
-"A thousand cuddles, a million deep kisses, and absolutely zero limits on how much I am going to cherish you tonight!",
-"Teddy, Panda, Kitty, and Bunny are cute, but none of them can make you smile like I can!",
-"Today's forecast: 100% chance of you getting held tight, stripped of your worries, and loved down to your absolute core.",
-"Your personal pampering department is working overtime, and I am incredibly eager to see you.",
-"A little kiss storm followed by a giant cuddle where I lock our fingers together and hold you close!",
-"You asked to be spoiled. I took that very seriously. Get ready, because I'm going to make you forget about everything but our happiness.",
-"You are officially the most pampered, craved, and deeply desired girl in my entire universe!"
-]
+    teddy: [
+        "Teddy Hugsy is wrapping his arms around you, but honestly? I just want to pull you close so we can stay warm together. 🧸",
+        "Come closer, Kuchuuu. Teddy is cute, but I'm the one who wants to hold your hand and squeeze you tight all night.",
+        "A giant squishy hug for the girl who owns my heart. I want to hold you so close that you feel completely safe. 🤎",
+        "Teddy says you deserve a thousand hugs, but I want to wrap my arms around you and whisper how much you mean to me.",
+        "SQUEEEEEZE! I'm hugging you through this teddy, but what I really want is to be tangled up under the covers with you, adoring every inch of you.",
+        "A little bear hug to warm you up, though I know a much better way—like sitting close together under a big blanket.",
+        "Teddy knows you’re my favourite human... and the only one I want to share all my dreams with.",
+        "A blanket, a pillow, and a cuddly teddy. Cute, but it’s missing me tangled up in conversation with you.",
+        "Sending you the softest hug, but please hurry back so I can hold you in my arms and explore every single hidden treasure of you my love.",
+        "Teddy wants you to remember you are deeply loved, and I want you to remember that my heart belongs completely to you. 🧸"
+    ],
+
+    panda: [
+        "Panda Pudding boops your nose, but I'm leaning in to taste those sweet lips until you're completely breathless. MWAH! 🐼",
+        "A little panda kiss, but my lips are craving to tell you all the reasons why I adore you.",
+        "Panda says: close your eyes. MWAH! One kiss for my Kuchuuu... now keep them closed while I hold you tight.",
+        "Panda prepared a basket of kisses, but I’ve got a whole night of adoration saved up for every hidden treasure of your beautiful body.",
+        "A tiny nose boop followed by a soft cuddle... right before we drift off to sleep together.",
+        "Panda thinks you need to be kissed a million times, and I happily volunteer to show you how much I care every single day.",
+        "MWAHHH! Kiss delivery started. Get ready, because you deserve all the affection in the world.",
+        "A little kiss for your forehead, one for your cheek, and a very warm, lingering one reserved just for you.",
+        "Panda is sending sweetness, but you look way sweeter when you're smiling happily next to me.",
+        "You've been selected as Panda’s favourite... which means I get exclusive rights to hold you close and unwrap all your hidden treasures. 💗"
+    ],
+
+    kitty: [
+        "Kitty says you are purr-fect, but I think you're absolutely stunning, especially when you're laughing happily. 🎀",
+        "Kitty compliment: your existence makes the world sweeter, and your beautiful heart makes mine skip a beat every time.",
+        "Kitty wants you to know you're my favourite person to tease, to hold close, and to cherish from head to toe.",
+        "That gorgeous smile looks stunning, but I can't wait to hold you close and let my fingers trace the sweet valleys of your body.",
+        "You deserve flowers, intense cuddles, and the kind of thoughtful love that makes you feel like royalty.",
+        "Kitty loves your smile, and my absolute favourite view is your beautiful face when I’m holding you tight.",
+        "A tiny reminder: you are more than enough, Kuchuuu. You are the only hidden treasure I crave, and I want to spend hours adoring you.",
+        "Kitty declared you the princess, which means I'm the lucky guy who gets to treat you right and spoil you completely tonight.",
+        "You are so beautiful and adorable even when you don't feel like it. Trust me, just looking at you makes me happy.",
+        "Sending you a little kitty love and a very dramatic, deeply affectionate MWAH! 🐱"
+    ],
+
+    bunny: [
+        "Bunny Blossom brings you a flower, but honestly, you're the only beautiful thing I want to focus on today. 🌷",
+        "A flower for my favourite person. May your day be soft, and your night be beautifully peaceful, wrapped up in my embrace.",
+        "Bunny says you deserve beautiful things, and I want to spend the night keeping you completely comfortable.",
+        "A tiny bouquet and a thousand gentle cuddles... followed by a warm embrace once we're alone.",
+        "Bunny picked the prettiest flower, but it doesn't even come close to how breathtaking you look just being yourself.",
+        "A little flower to remind you that you are growing beautifully, and I love holding your hand as you relax.",
+        "Here is a flower, a kiss, and a very soft bunny hug. Now come over here and let's talk properly.",
+        "Bunny hopes something lovely finds you today. Hopefully, it's the thought of us spending time together later.",
+        "You deserve kindness, but you also deserve to be held close, protected, and let my lips trace down to your core. Here's a flower!",
+        "Bunny Blossom sends a garden of love, along with my private invitation to just relax in my company tonight. 🐰"
+    ],
+
+    snowy: [
+        "Blanket tucked. Pillow fluffed. Forehead kissed. Now slide under here, let me wrap you completely under my blanket, and feel your yumm wetness against mine.",
+        "Snowy brought the fluffiest blanket, but being close together is the absolute best way to stay warm tonight.",
+        "Come snuggle. Leave all your clothes and worries at the door, slide next to me, and let's just get beautifully lost in each other.",
+        "A warm little cuddle from your polar bear, as i slide my hand inside caressing ur softy hairs and I promise to keep you safe and warm under this heavy blanket all night.",
+        "Snowy says: rest now, sweetheart. Let me hold you tight against my chest until you feel exactly how much I cherish you.",
+        "A blanket burrito with extra kisses coming right up! Prepare to be completely caressed by my hands and thoroughly to your sweet blossom.",
+        "Your comfort is my number one priority... making sure you feel safe and loved before morning.",
+        "A tiny polar bear is guarding your corner, keeping you safe until I can be there to hold you.",
+        "Sending you the coziest hug, because I'd rather be right there softly stroking your hair and listening to your day.",
+        "Get comfy, Kuchuuu. Snowy has got you, and I promise you are going to feel completely cherished and thoroughly cared for tonight. 🐻‍❄️"
+    ],
+
+    meow: [
+        "Mewww! Little Meow brought seventeen tiny kisses, but I'm bringing one long, sweet kiss that’ll show you my heart.",
+        "Little Meow refuses to leave until you're cuddled, and honestly, I plan on keeping my arms wrapped around you all night.",
+        "A tiny kitten hug for the girl who makes my pulse race. You have no idea what your presence does to my happiness.",
+        "Meow says: you are loved more than all the fish in the ocean... and I want to share every single moment with you tonight, baby.",
+        "A little purr, a little kiss, and a whole lot of warmth just to show you how much I want to be near you.",
+        "Little Meow wants to sit beside you, but I want to pull you right onto my lap, hold you close, and feel your softyy valleys press against me.",
+        "A soft paw on your hand, a tiny kiss on your cheek, and a gentle hug just to remind you that you are mine.",
+        "Kitten cuddles dispatched immediately! Get ready to be surrounded by warmth and thoroughly loved very soon.",
+        "You are my absolute favourite human. No competition. Now come here, sit down, and tell me everything.",
+        "Mewww! Sending a thousand tiny kitten kisses, but saving the sweetest ones for your beautiful lips. 😽"
+    ],
+
+    kiss: [
+        "MUWAHHHHSSSHSHSHS! A whole truckload of kisses, and I’m aiming every single one right at your sweet smile!",
+        "Mwah! Mwah! MWAHHHH! Come here right now, my Kuchuuu, my heart belongs completely to you tonight!",
+        "One kiss for your forehead, one for your cheek, and a million sweet ones all over your face!",
+        "Kiss attack incoming! You better get ready to be caught in a tight embrace and thoroughly covered in affection. 💋",
+        "A very dramatic MWAHHHH from your favourite kiss supplier! Warning: these kisses are very affectionate.",
+        "I hope you're ready because once I hold you close against me, I have absolutely no intention of letting you go anytime soon.",
+        "Sending kisses until you're hiding your blushing face in my neck, looking absolutely beautiful.",
+        "Mwahhhhh! Consider yourself thoroughly kissed, cared for, and completely worshipped by the guy who adores you to the core.",
+        "A night full of kisses, all reserved for you. Waiting to land on every soft and wet corner of ur skin.",
+        "Kiss delivery complete? Never. I'm coming back for seconds, thirds, and a whole night of making you feel completely loved!"
+    ],
+
+    forehead: [
+        "A gentle forehead kiss to remind you that you are safe, loved, and entirely mine to protect and cherish.",
+        "Mwah. One little forehead kiss, just because you look so beautifully peaceful when you're resting next to me.",
+        "A soft kiss on your forehead. Stay close, sweetheart, let me pull you so close to my chest that we feel completely connected.",
+        "Closing my eyes and giving you the gentlest forehead smooch... you make me so incredibly happy when you're close.",
+        "One kiss for your worries, one for your tiredness, and a sweet one on the lips to make you forget everything else.",
+        "A forehead kiss that says: you don't have to handle everything alone. Let me take care of you tonight.",
+        "MWAHHH! A tiny kiss from the guy who is completely, utterly obsessed with your happiness.",
+        "Let me kiss that pretty forehead, hold you tight by the waist, and whisper exactly how glad I am to be with you.",
+        "A soft little smooch for my precious girl. You look so perfect when you're completely wrapped up and melting in my embrace.",
+        "Forehead kiss delivered with an unlimited amount of love... and a promise of deep affection to follow very soon. 😘"
+    ],
+
+    cuddle: [
+        "Slides my hand on ur waist, pulls u closest from behind and cuddlyy cuddlyy untill u feel completely warm and loved.",
+        "Come here, baby. Let me wrap my arms around you and hold you so close that there's no space left between us.",
+        "A long cuddle with no rushing, no letting go, and a whole lot of smooth, warm affection.",
+        "Your head on my chest, my arms tightly around you, our legs tangled together under the sheets. Absolutely perfect.",
+        "A soft, safe cuddle for my favourite human. You feel so amazingly warm and perfect squeezed right against me, baby.",
+        "SQUISHHH! You have officially been hugged by the guy who can't stop thinking about you.",
+        "I wish I could hold you right now. I'd lock you in my embrace, strip away the distance, and keep you next to me.",
+        "A cuddle that says more than a thousand words... let the warmth of my embrace show you how much I care.",
+        "Come closer. There is always room for you right beside me. Slide right next to me, sweetheart, and let's get cozy.",
+        "Holding you gently, kissing your cheek until you're smiling, and reminding you how deeply, intensely loved you are. 🤗"
+    ],
+
+    headpat: [
+        "Pat pat pat pat pat! A little head pat for my precious girl... now come bury your face in my neck and let me hold you.",
+        "There, there, Kuchuuu. You're doing wonderfully, and you look so incredibly cute when you look up at me with those sleepy eyes.",
+        "A gentle pat on your head, a tiny kiss on your forehead, and my fingers getting tangled in your hair as I pull you close.",
+        "Pat pat! Someone deserves extra affection today, and I plan on giving it to you until you are completely relaxed.",
+        "You have worked so hard. Now lay back, relax completely, and let me hold you for the rest of the night.",
+        "A thousand gentle pats, a million reassuring hugs, and a lifetime of me cherishing and adoring every single part of your personality.",
+        "Pat pat pat. I am so incredibly proud of you, sweetheart. Now let me hold you tight and make all your tension completely melt away.",
+        "A tiny head pat from your personal happiness department... full physical cuddles are highly mandatory for the next few hours.",
+        "Sending you the softest little head pats. I just want to stroke your hair with one hand while my other hand holds you close.",
+        "Pat pat! You're doing better than you think. Now come let me pull you close and show you how much I adore you. 🥺"
+    ],
+
+    hug: [
+        "A very tight hug. SQUUUIIIISH! I am not letting go until I've completely memorised the feel of holding you.",
+        "Consider yourself hugged a thousand times... and expect a few sweet, soft kisses on your cheek while I'm holding you.",
+        "Come into my arms, Kuchuuu. I've got you tight, and I promise to love you intensely.",
+        "A hug for your heart, a kiss for your forehead, and my hands resting firmly on your back right where they belong.",
+        "Sending the warmest hug across the distance, but I'd much rather be right there resting softly next to you.",
+        "You deserve a hug that lasts forever. Let me wrap you up, pull you close to me, and squeeze you tightly.",
+        "A giant squeeze from your favourite person! I just want to wrap myself around you and stay like this.",
+        "If I were there, I'd hug you so tight against my chest you'd feel exactly how hard and fast your presence makes my heart beat.",
+        "A little reminder wrapped in a big hug: you are my absolute everything, and I am completely crazy for you.",
+        "Hug delivery complete. Actually, no. I'm keeping my arms around you indefinitely. You're trapped with me. 🫂"
+    ],
+
+    affirmation: [
+        "You don't have to be cheerful every minute to be loved every second. I love you even when you're a tired, grumpy, needy little baby.",
+        "You are allowed to rest without earning it. Just lay back, let go of everything, and let me take care of you.",
+        "Even on a difficult day, you are the only girl who makes my world completely spin. You are my absolute favourite person.",
+        "Your feelings are welcome here. All of them. Cry, vent, rest—I’m staying right here to hold you through all of it.",
+        "You are never a burden for needing care. Whispering sweet things and keeping you safe is my favorite thing to do.",
+        "You deserve softness, endless patience, and to be held so deeply that you completely forget what you were stressed about.",
+        "You do not need to have everything figured out tonight. Just rest right next to me, and we'll handle tomorrow together.",
+        "A bad day is just something you're going through, not who you are. To me, you are always the most perfect, beautiful creature.",
+        "You are precious and so incredibly beautiful exactly as you are. Never doubt how badly I want to be close to you.",
+        "Take your time, sweetheart. I am not going anywhere, and my heart and my arms are completely yours. 🌸"
+    ],
+
+    breathing: [
+        "Take a comfortable breath. Inhale... exhale... now imagine my warm hands holding yours gently.",
+        "Slow down, sweetheart. You don't have to rush through today. Just match your breathing to mine while I hold you completely close.",
+        "One gentle breath at a time. Close your eyes, let go of the noise, and just think about us relaxing together.",
+        "Let your shoulders soften. You deserve a peaceful moment, and I want to be the one right there to help the tension away.",
+        "No pressure. Just a little moment for yourself... and a peaceful evening ahead.",
+        "You can pause whenever you need to. My shoulder is always here for you to lean on while you rest.",
+        "A little stillness for a very precious heart. I'm holding you close and comforting you through this message, baby.",
+        "Breathe gently, Kuchuuu. You are doing just fine, and I am so incredibly lucky to have the most gorgeous girl in the world.",
+        "The world can wait for a moment. Take your time, get completely comfortable, shed your worries, and let me keep you warm.",
+        "Sending you a peaceful little moment... along with a sweet reminder of how much I want to hold you tonight. 🌸"
+    ],
+
+    letter: [
+        "A little letter from the guy who is currently staring at his screen wishing he was right there next to you.",
+        "There are so many sweet things I want to share with you, sweetheart. You have no idea how much I adore you.",
+        "You deserve to be loved on the hard days too, and I promise to love you harder and hold you tighter when the world gets heavy.",
+        "You never have to pretend to be okay with me. I want all of the real, raw, beautiful you.",
+        "If you need to talk, I’m all ears. If you need quiet, I’ll just hold you close and trace slow, comforting patterns on your hand.",
+        "You are so precious even when you're tired. Honestly, you look incredibly sweet and soft when you're sleepy.",
+        "A difficult day doesn't change how much you mean to me. You're still the best, most beautiful thing that ever happened to me.",
+        "You can take your time. I am completely patient when it comes to your heart, and my arms will always be here to comfort you.",
+        "I love you in every single version of yourself. Messy hair, tired eyes, or laughing—I want it all.",
+        "A little reminder from me: you are my girl, my favourite person, and the only one I want next to me. 💌"
+    ],
+
+    spoil: [
+        "The entire plushie gang is piling in, but I'm throwing them off the bed because I want to squeeze you all to myself!",
+        "Muwahhh! Mwah! MWAHHH! You have been kissed silly, and I'm just getting started on showing you how much I care!",
+        "Princess treatment activated. Prepare to be thoroughly adored, playfully teased, and completely cozy tonight!",
+        "A thousand cuddles, a million deep kisses, and absolutely zero limits on how much I am going to cherish you tonight!",
+        "Teddy, Panda, Kitty, and Bunny are cute, but none of them can make you smile like I can!",
+        "Today's forecast: 100% chance of you getting held tight, stripped of your worries, and loved down to your absolute core.",
+        "Your personal pampering department is working overtime, and I am incredibly eager to see you.",
+        "A little kiss storm followed by a giant cuddle where I lock our fingers together and hold you close!",
+        "You asked to be spoiled. I took that very seriously. Get ready, because I'm going to make you forget about everything but our happiness.",
+        "You are officially the most pampered, craved, and deeply desired girl in my entire universe!"
+    ]
 };
-    
 /* =========================
    CATEGORY IDENTIFICATION
 ========================= */
