@@ -753,7 +753,23 @@ function showSpeechMessage(button, message) {
         }, 300);
     }, 15000);
 }
+/* Reposition visible speech bubbles when scrolling */
 
+window.addEventListener('scroll', () => {
+    speechBubbles.forEach((bubble, target) => {
+        if (bubble.classList.contains('show')) {
+            positionSpeechBubble(bubble, target);
+        }
+    });
+}, { passive: true });
+
+window.addEventListener('resize', () => {
+    speechBubbles.forEach((bubble, target) => {
+        if (bubble.classList.contains('show')) {
+            positionSpeechBubble(bubble, target);
+        }
+    });
+});
 /* =========================
    RANDOM MESSAGE
 ========================= */
@@ -885,7 +901,10 @@ function startHold(button, pointerId) {
 
         createExplosion(shell, category);
 
-        toast(holdMessages[category] || holdMessages.spoil);
+        showSpeechMessage(
+    button,
+    holdMessages[category] || holdMessages.spoil
+);
 
         // Return to normal styling.
         setTimeout(() => {
