@@ -124,7 +124,102 @@ button.holding {
     }
 }
     
-    
+ /* =========================
+   PLUSHIE SPEECH BUBBLES
+========================= */
+
+.speech-bubble {
+    position: fixed;
+    z-index: 10000;
+
+    width: max-content;
+    max-width: min(320px, 88vw);
+
+    padding: 13px 17px;
+
+    background: linear-gradient(145deg, #fff, #fff0f5);
+    color: #a45d79;
+
+    border: 2px solid #f5c6d5;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px #a85e7b35;
+
+    font-family: Nunito, sans-serif;
+    font-size: .92rem;
+    font-weight: 800;
+    line-height: 1.55;
+    text-align: center;
+
+    pointer-events: none;
+    overflow-wrap: anywhere;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translate(-50%, -85%) scale(.85);
+    transform-origin: center bottom;
+
+    transition:
+        opacity .25s ease,
+        transform .3s cubic-bezier(.2,.8,.2,1),
+        visibility .25s;
+}
+
+/* Visible bubble */
+
+.speech-bubble.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -100%) scale(1);
+}
+
+/* Little speech tail */
+
+.speech-bubble::after {
+    content: "";
+    position: absolute;
+
+    left: 50%;
+    bottom: -11px;
+
+    transform: translateX(-50%);
+
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 11px solid #f5c6d5;
+}
+
+/* Bubble appears below the emoji if there isn't enough
+   room above it on the screen. */
+
+.speech-bubble.below {
+    transform: translate(-50%, 10px) scale(.85);
+    transform-origin: center top;
+}
+
+.speech-bubble.below.show {
+    transform: translate(-50%, 0) scale(1);
+}
+
+.speech-bubble.below::after {
+    bottom: auto;
+    top: -11px;
+
+    border-top: 0;
+    border-bottom: 11px solid #f5c6d5;
+}
+
+/* Disappearing animation */
+
+.speech-bubble.hide {
+    opacity: 0;
+    transform: translate(-50%, -85%) scale(.85);
+}
+
+.speech-bubble.below.hide {
+    transform: translate(-50%, 10px) scale(.85);
+}   
 </style>
 </head>
 <body>
@@ -246,7 +341,7 @@ function toast(message) {
 
     toastTimer = setTimeout(() => {
         toastElement.classList.remove('show');
-    }, 14000);
+    }, 15000);
 }
 
 function randomMessage(messages) {
@@ -574,14 +669,105 @@ function createExplosion(target, category) {
 }
 
 /* =========================
+   PLUSHIE SPEECH BUBBLES
+========================= */
+
+const speechBubbles = new Map();
+
+function positionSpeechBubble(bubble, target) {
+    const rect = target.getBoundingClientRect();
+
+    const centerX = rect.left + rect.width / 2;
+
+    // Keep the bubble within the screen horizontally.
+    const halfWidth = bubble.offsetWidth / 2;
+
+    const safeX = Math.max(
+        halfWidth + 10,
+        Math.min(
+            centerX,
+            window.innerWidth - halfWidth - 10
+        )
+    );
+
+    bubble.style.left = safeX + 'px';
+
+    // Measure the bubble and check available space.
+    const bubbleHeight = bubble.offsetHeight;
+
+    if (rect.top >= bubbleHeight + 22) {
+        bubble.classList.remove('below');
+        bubble.style.top = (rect.top - 12) + 'px';
+    } else {
+        bubble.classList.add('below');
+        bubble.style.top = (rect.bottom + 12) + 'px';
+    }
+}
+
+function showSpeechMessage(button, message) {
+    const target = findEmoji(button);
+
+    if (!target) return;
+
+    let bubble = speechBubbles.get(target);
+
+    // Create a separate bubble for this particular emoji.
+    if (!bubble) {
+        bubble = document.createElement('div');
+
+        bubble.className = 'speech-bubble';
+
+        document.body.appendChild(bubble);
+
+        speechBubbles.set(target, bubble);
+    }
+
+    // Clear the previous timer for this emoji only.
+    clearTimeout(bubble.hideTimer);
+
+    bubble.textContent = message;
+
+    // Position the bubble above its speaking emoji.
+    bubble.classList.remove('show', 'hide');
+
+    positionSpeechBubble(bubble, target);
+
+    // Restart the entrance animation.
+    void bubble.offsetWidth;
+
+    bubble.classList.add('show');
+
+    // Keep the message visible for 15 seconds.
+    bubble.hideTimer = setTimeout(() => {
+        bubble.classList.remove('show');
+        bubble.classList.add('hide');
+
+        setTimeout(() => {
+            if (
+                speechBubbles.get(target) === bubble &&
+                !bubble.classList.contains('show')
+            ) {
+                bubble.remove();
+                speechBubbles.delete(target);
+            }
+        }, 300);
+    }, 15000);
+}
+
+/* =========================
    RANDOM MESSAGE
 ========================= */
 
 function showRandomMessage(button) {
     const category = getCategory(button);
-    const messages = messageBank[category] || messageBank.spoil;
 
-    toast(randomMessage(messages));
+    const messages =
+        messageBank[category] || messageBank.spoil;
+
+    showSpeechMessage(
+        button,
+        randomMessage(messages)
+    );
 }
 
 /* =========================
