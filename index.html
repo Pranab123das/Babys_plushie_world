@@ -708,34 +708,39 @@ function showSpeechMessage(button, message) {
     const target = findEmoji(button);
     if (!target) return;
 
-    // Remove every previous emoji's speech bubble
-    speechBubbles.forEach((bubble, oldTarget) => {
+    // Remove ALL existing speech bubbles from the page
+    document.querySelectorAll('.speech-bubble').forEach(bubble => {
         clearTimeout(bubble.hideTimer);
         bubble.remove();
-        speechBubbles.delete(oldTarget);
     });
 
-    // Create a fresh bubble for the current emoji
+    // Clear the tracking map
+    speechBubbles.clear();
+
+    // Create the new bubble
     const bubble = document.createElement('div');
     bubble.className = 'speech-bubble';
+    bubble.textContent = message;
+
     document.body.appendChild(bubble);
     speechBubbles.set(target, bubble);
-
-    bubble.textContent = message;
 
     positionSpeechBubble(bubble, target);
 
     void bubble.offsetWidth;
     bubble.classList.add('show');
 
-    // Automatically hide after 15 seconds
+    // Hide after 15 seconds
     bubble.hideTimer = setTimeout(() => {
         bubble.classList.remove('show');
         bubble.classList.add('hide');
 
         setTimeout(() => {
-            if (speechBubbles.get(target) === bubble) {
+            if (bubble.parentNode) {
                 bubble.remove();
+            }
+
+            if (speechBubbles.get(target) === bubble) {
                 speechBubbles.delete(target);
             }
         }, 300);
