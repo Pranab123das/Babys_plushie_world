@@ -706,51 +706,40 @@ function positionSpeechBubble(bubble, target) {
 
 function showSpeechMessage(button, message) {
     const target = findEmoji(button);
-
     if (!target) return;
 
-    let bubble = speechBubbles.get(target);
+    // Remove every previous emoji's speech bubble
+    speechBubbles.forEach((bubble, oldTarget) => {
+        clearTimeout(bubble.hideTimer);
+        bubble.remove();
+        speechBubbles.delete(oldTarget);
+    });
 
-    // Create a separate bubble for this particular emoji.
-    if (!bubble) {
-        bubble = document.createElement('div');
-
-        bubble.className = 'speech-bubble';
-
-        document.body.appendChild(bubble);
-
-        speechBubbles.set(target, bubble);
-    }
-
-    // Clear the previous timer for this emoji only.
-    clearTimeout(bubble.hideTimer);
+    // Create a fresh bubble for the current emoji
+    const bubble = document.createElement('div');
+    bubble.className = 'speech-bubble';
+    document.body.appendChild(bubble);
+    speechBubbles.set(target, bubble);
 
     bubble.textContent = message;
 
-    // Position the bubble above its speaking emoji.
-    bubble.classList.remove('show', 'hide');
-
     positionSpeechBubble(bubble, target);
 
-    // Restart the entrance animation.
     void bubble.offsetWidth;
-
     bubble.classList.add('show');
 
-    // Keep the message visible for 15 seconds.
+    // Automatically hide after 15 seconds
     bubble.hideTimer = setTimeout(() => {
         bubble.classList.remove('show');
         bubble.classList.add('hide');
 
         setTimeout(() => {
-            if (
-                speechBubbles.get(target) === bubble &&
-                !bubble.classList.contains('show')
-            ) {
+            if (speechBubbles.get(target) === bubble) {
                 bubble.remove();
                 speechBubbles.delete(target);
             }
         }, 300);
+
     }, 15000);
 }
 /* Reposition visible speech bubbles when scrolling */
