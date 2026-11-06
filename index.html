@@ -367,20 +367,24 @@ const toastElement = $('toast');
 function toast(message) {
     if (!toastElement) return;
 
+    // A toast must never overlap a speech bubble.
+    document.querySelectorAll('.speech-bubble').forEach(bubble => {
+        clearTimeout(bubble.hideTimer);
+        bubble.remove();
+    });
+
+    speechBubbles?.clear?.();
+
     toastElement.textContent = message;
     toastElement.classList.add('show');
 
     clearTimeout(toastTimer);
 
+    // Redeem messages disappear after 5 seconds.
     toastTimer = setTimeout(() => {
         toastElement.classList.remove('show');
-    }, 15000);
+    }, 5000);
 }
-
-function randomMessage(messages) {
-    return messages[Math.floor(Math.random() * messages.length)];
-}
-
 /* =========================
    MESSAGE COLLECTIONS
 ========================= */
@@ -700,103 +704,135 @@ function createExplosion(target, category) {
         setTimeout(() => particle.remove(), 1600);
     }
 }
-
 /* =========================
-   PLUSHIE SPEECH BUBBLES
+   FLUFFY CLOUD SPEECH BUBBLE
 ========================= */
 
-const speechBubbles = new Map();
+.speech-bubble {
+    position: fixed;
+    z-index: 10000;
 
-function positionSpeechBubble(bubble, target) {
-    const rect = target.getBoundingClientRect();
+    width: max-content;
+    max-width: min(320px, 88vw);
 
-    const centerX = rect.left + rect.width / 2;
+    padding: 23px 25px;
 
-    // Keep the bubble within the screen horizontally.
-    const halfWidth = bubble.offsetWidth / 2;
+    color: #a45d79;
+    font-family: Nunito, sans-serif;
+    font-size: .92rem;
+    font-weight: 800;
+    line-height: 1.55;
+    text-align: center;
 
-    const safeX = Math.max(
-        halfWidth + 10,
-        Math.min(
-            centerX,
-            window.innerWidth - halfWidth - 10
-        )
-    );
+    pointer-events: none;
+    overflow-wrap: anywhere;
 
-    bubble.style.left = safeX + 'px';
+    /* The cloud shape is drawn by ::before */
+    background: transparent;
+    border: none;
+    border-radius: 0;
 
-    // Measure the bubble and check available space.
-    const bubbleHeight = bubble.offsetHeight;
+    filter: drop-shadow(0 9px 12px #a85e7b25);
 
-    if (rect.top >= bubbleHeight + 22) {
-        bubble.classList.remove('below');
-        bubble.style.top = (rect.top - 12) + 'px';
-    } else {
-        bubble.classList.add('below');
-        bubble.style.top = (rect.bottom + 12) + 'px';
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translate(-50%, -70%) scale(.88);
+    transform-origin: center bottom;
+
+    transition:
+        opacity 1s ease,
+        transform 1.4s cubic-bezier(.16, 1, .3, 1),
+        visibility 0s linear 1.4s;
+}
+
+/* Main cloud body and fluffy outline */
+.speech-bubble::before {
+    content: "";
+    position: absolute;
+    inset: 12px 0 12px;
+    z-index: -1;
+
+    background: linear-gradient(145deg, #fffefe, #fff0f6);
+    border: 2px solid #f3bfd2;
+    border-radius: 45px;
+
+    box-shadow:
+        /* Top cloud bumps */
+        0 -12px 0 -4px #fff5f9,
+        0 -12px 0 -2px #f3bfd2,
+
+        32px -17px 0 -6px #fff5f9,
+        32px -17px 0 -4px #f3bfd2,
+
+        -32px -17px 0 -6px #fff5f9,
+        -32px -17px 0 -4px #f3bfd2,
+
+        /* Side cloud bumps */
+        12px 0 0 -5px #fff5f9,
+        12px 0 0 -3px #f3bfd2,
+
+        -12px 0 0 -5px #fff5f9,
+        -12px 0 0 -3px #f3bfd2;
+}
+
+/* Small fluffy tail */
+.speech-bubble::after {
+    content: "";
+    position: absolute;
+
+    width: 19px;
+    height: 15px;
+
+    left: 50%;
+    bottom: 1px;
+
+    background: #fff0f6;
+    border: 2px solid #f3bfd2;
+    border-radius: 50%;
+
+    transform: translateX(-50%) rotate(20deg);
+}
+
+/* Slowly floating entrance */
+.speech-bubble.show {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translate(-50%, -100%) scale(1);
+
+    transition:
+        opacity 1s ease,
+        transform 1.4s cubic-bezier(.16, 1, .3, 1),
+        visibility 0s;
+}
+
+/* Disappearance */
+.speech-bubble.hide {
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translate(-50%, -85%) scale(.9);
+
+    transition:
+        opacity .45s ease,
+        transform .55s ease,
+        visibility 0s linear .55s;
+}
+
+/* When the bubble appears below the emoji */
+.speech-bubble.below {
+    transform: translate(-50%, 15px) scale(.88);
+    transform-origin: center top;
+}
+
+.speech-bubble.below.show {
+    transform: translate(-50%, 0) scale(1);
+}
+
+.speech-bubble.below.hide {
+    transform: translate(-50%, 10px) scale(.9);
     }
-}
-
-function showSpeechMessage(button, message) {
-    const target = findEmoji(button);
-    if (!target) return;
-
-    // Remove ALL existing speech bubbles from the page
-    document.querySelectorAll('.speech-bubble').forEach(bubble => {
-        clearTimeout(bubble.hideTimer);
-        bubble.remove();
-    });
-
-    // Clear the tracking map
-    speechBubbles.clear();
-
-    // Create the new bubble
-    const bubble = document.createElement('div');
-    bubble.className = 'speech-bubble';
-    bubble.textContent = message;
-
-    document.body.appendChild(bubble);
-    speechBubbles.set(target, bubble);
-
-    positionSpeechBubble(bubble, target);
-
-    void bubble.offsetWidth;
-    bubble.classList.add('show');
-
-    // Hide after 15 seconds
-    bubble.hideTimer = setTimeout(() => {
-        bubble.classList.remove('show');
-        bubble.classList.add('hide');
-
-        setTimeout(() => {
-            if (bubble.parentNode) {
-                bubble.remove();
-            }
-
-            if (speechBubbles.get(target) === bubble) {
-                speechBubbles.delete(target);
-            }
-        }, 300);
-
-    }, 15000);
-}
-/* Reposition visible speech bubbles when scrolling */
-
-window.addEventListener('scroll', () => {
-    speechBubbles.forEach((bubble, target) => {
-        if (bubble.classList.contains('show')) {
-            positionSpeechBubble(bubble, target);
-        }
-    });
-}, { passive: true });
-
-window.addEventListener('resize', () => {
-    speechBubbles.forEach((bubble, target) => {
-        if (bubble.classList.contains('show')) {
-            positionSpeechBubble(bubble, target);
-        }
-    });
-});
 /* =========================
    RANDOM MESSAGE
 ========================= */
