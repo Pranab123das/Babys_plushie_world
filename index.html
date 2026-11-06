@@ -126,8 +126,9 @@ button.holding {
     }
 }
     
+
 /* =========================
-   FLUFFY CLOUD SPEECH BUBBLE
+   SOFT FLUFFY CLOUD BUBBLE
 ========================= */
 
 .speech-bubble {
@@ -135,22 +136,31 @@ button.holding {
     z-index: 10000;
 
     width: max-content;
-    max-width: min(320px, 88vw);
-    padding: 19px 23px;
+    max-width: min(320px, 82vw);
+    padding: 22px 25px;
 
-    background: #fff5f9;
     color: #a45d79;
-
-    border: 2px solid #f3bfd2;
-    border-radius: 45px;
-
-    box-shadow: 0 12px 30px #a85e7b30;
-
     font-family: Nunito, sans-serif;
     font-size: .92rem;
     font-weight: 800;
     line-height: 1.55;
     text-align: center;
+
+    background:
+        radial-gradient(ellipse at 50% 8%, #fff5f9 0 25%, transparent 26%),
+        radial-gradient(ellipse at 22% 22%, #fff5f9 0 24%, transparent 25%),
+        radial-gradient(ellipse at 78% 22%, #fff5f9 0 24%, transparent 25%),
+        radial-gradient(ellipse at 10% 50%, #fff5f9 0 22%, transparent 23%),
+        radial-gradient(ellipse at 90% 50%, #fff5f9 0 22%, transparent 23%),
+        radial-gradient(ellipse at 25% 78%, #fff5f9 0 23%, transparent 24%),
+        radial-gradient(ellipse at 75% 78%, #fff5f9 0 23%, transparent 24%),
+        radial-gradient(ellipse at 50% 90%, #fff5f9 0 25%, transparent 26%),
+        #fff5f9;
+
+    border: 2px solid #f3bfd2;
+    border-radius: 38% 42% 35% 40% / 45% 38% 45% 40%;
+
+    box-shadow: 0 10px 25px #a85e7b25;
 
     pointer-events: none;
     overflow-wrap: anywhere;
@@ -169,40 +179,26 @@ button.holding {
     isolation: isolate;
 }
 
-/* Fluffy cloud bumps */
+/* Soft cloud outline */
 .speech-bubble::before {
     content: "";
     position: absolute;
-    inset: 0;
+    inset: -3px;
     z-index: -1;
-
-    background: #fff5f9;
-    border-radius: 45px;
-
-    box-shadow:
-        0 -12px 0 -4px #fff5f9,
-        0 -12px 0 -2px #f3bfd2,
-
-        32px -15px 0 -6px #fff5f9,
-        32px -15px 0 -4px #f3bfd2,
-
-        -32px -15px 0 -6px #fff5f9,
-        -32px -15px 0 -4px #f3bfd2,
-
-        0 12px 0 -5px #fff5f9,
-        0 12px 0 -3px #f3bfd2;
+    border-radius: inherit;
+    background: #f3bfd2;
+    filter: blur(1px);
 }
 
-/* Cloud tail */
+/* Little cloud tail */
 .speech-bubble::after {
     content: "";
     position: absolute;
-
-    width: 17px;
-    height: 17px;
+    width: 15px;
+    height: 15px;
 
     left: 50%;
-    bottom: -9px;
+    bottom: -8px;
 
     background: #fff5f9;
     border-right: 2px solid #f3bfd2;
@@ -216,7 +212,6 @@ button.holding {
 .speech-bubble.show {
     opacity: 1;
     visibility: visible;
-
     transform: translate(-50%, -100%) scale(1);
 
     transition:
@@ -229,7 +224,6 @@ button.holding {
 .speech-bubble.hide {
     opacity: 0;
     visibility: hidden;
-
     transform: translate(-50%, -85%) scale(.9);
 
     transition:
@@ -251,6 +245,7 @@ button.holding {
 .speech-bubble.below.hide {
     transform: translate(-50%, 10px) scale(.9);
 }
+        
     </style>
 </head>
 <body>
